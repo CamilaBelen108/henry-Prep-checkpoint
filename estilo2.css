@@ -1,0 +1,101 @@
+#div-negro{
+    width: 250px ;
+    height: 150px ;
+    background-color: black;
+margin-top: 30px black;
+margin-bottom: 30px black;
+border-top: 1px solid black;
+border-bottom: 30px solid black;
+border-left: 1px solid black;
+border-right: 20px solid black;
+padding-top: 10px black;
+padding-bottom: 10px black;
+padding-left: 5px black;
+padding-right: 5px black;
+}
+#uno{
+    background: white;
+    border: orange 5px solid;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    display: flex;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 700px;
+}
+#uno-about{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color:lightgreen;
+    }
+    #uno-careers{
+        width: 50px;
+    height: 50px;
+        color: white;
+        background-color: lightskyblue;
+    }
+    #uno-contact{
+        width: 50px;
+    height: 50px;
+        color: white;
+        background-color: tomato;
+    }
+#tres{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+   border: orange 5px solid; 
+   margin-top: 8px;
+   margin-bottom: 8px;
+   text-align: center;
+   width: 700px;
+} 
+#tres-about{
+    color:white;
+    background-color: lightgreen; 
+    height: 50px;  
+    }
+#tres-careers{
+    color: white;
+    background-color: lightskyblue;
+    height: 50px;
+}
+#tres-contact{
+    color: white;
+    background-color: tomato;
+    height: 50px;
+}
+#dos{
+    border: salmon 5px solid;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    display: flex;
+    width: 700px;
+    display: flexbox;
+    flex-direction: row;
+    margin-top: 8px;
+}
+#dos-about{
+    width: 50px;
+    height: 50px;
+    color:white;
+    background-color: lightgreen; 
+    margin-left: auto;
+    }
+#dos-careers{
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: lightskyblue;
+}
+#dos-contact{
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: tomato;
+}
