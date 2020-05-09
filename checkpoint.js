@@ -6,10 +6,10 @@ function menorMayor(numeros) {
   // que contenga el menor número del arreglo en la posición cero y el mayor número del arreglo en la posición 1.
   // Ej: menorMayor([4, 6, 1, 7, 15]) // retorna [1, 15]
   return numeros.reduce(
-    (accumulator, currentValue) => {
+    (acc, curr) => {
         return [
-            Math.min(currentValue, accumulator[0]), 
-            Math.max(currentValue, accumulator[1])
+            Math.min(curr, acc[0]), 
+            Math.max(curr, acc[1])
         ];
     }, [Number.MAX_VALUE, Number.MIN_VALUE]
 );
@@ -59,6 +59,8 @@ function pluck(array, propiedad) {
   // var productos = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }]
   // productos.pluck(productos, 'name') // ['TV LCD', 'Computadora']
   // pista: es una buena oportunidad para usar map.
+  var productos = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }]
+ console.log(_.pluck(people, 'name'));
 }
 
 // =======================================================================
@@ -97,17 +99,17 @@ function crearClasePersona() {
         return (elemento.nombre);
     }
     
-    ,getHobbies() ,{
+    getHobbies() {
       // Escribe una función que retorne un arreglo con los hobbies de la persona
       // Ej:
       // persona.getHobbies() // retorna ['correr', 'dormir', 'nadar']
       
       var :hobbiesPersona=Persona.hobbies.map(function(elemento){
-        return (elemento.hobbies);
+        return (elemento.hobbies)
   
   }
 
-    //getPromedioEdad() {
+    getPromedioEdad() {
       // Escribe una función que retorne el promedio de edad de los amigos de una persona
       // ej, si la persona tuviera estos amigos:
       // {
@@ -120,34 +122,46 @@ function crearClasePersona() {
       //   }]
       // }
       // persona.getPromedioEdad() // retorna 29
-  
-//}
+     var Edades=amigos.reduce(function(acc,elemento){
+        return acc + elemento.edad
+      },0)
+      {var PromedioEdad= Edades/this.amigos.length};
+    }
 
 
 /* ====================== EXTRA CREDIT ===================== */
 // Este ejercicio no cuenta en el puntaje del checkpoint
 // pero si llegas hasta aca y lo haces quiere decir que venis super bien!
 
-//function filtrar(funcion) {
+  //function filtrar(funcion) {
   // Escribi una función filtrar en el prototipo de Arrays,
   // que recibe una funcion (callback) que devuelve true o false.
   // filtrar los elementos de ese arreglo en base al resultado de esa funcion
   // comparadora, devolver un nuevo arreglo con los elementos filtrados.
   // NO USAR LA FUNCION FILTER DE LOS ARREGLOS.
   // ej:
-  // var productos = [{
-  //   price: 100,
-  //   name: 'tv'
-  // }, {
-  //   price: 50,
-  //   name: 'phone'
-  // }, {
-  //   price: 30,
-  //   name: 'lamp'
-  // }]
+   //var productos = [{
+    // price: 100,
+   //  name: 'tv'
+   //}, {
+    // price: 50,
+    // name: 'phone'
+   //}, {
+    // price: 30,
+    // name: 'lamp'
+  //}]
   // productos.filtrar(function(p) {
-  //   return p.price >= 50;
-  // }) => [{price: 100, name:'tv'}]
-
+    // return p.price >= 50;
+   //}) => [{price: 100, name:'tv'}]
 //};
-//      
+// No modifiques nada debajo de esta linea
+
+//module.exports = {
+//  sumArray,
+//  menorMayor,
+//  stringMasLarga,
+//  buscarAmigo,
+//  pluck,
+// crearClasePersona,
+//  filtrar,
+//};
