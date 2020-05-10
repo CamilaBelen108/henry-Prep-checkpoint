@@ -34,7 +34,7 @@ function buscarAmigo(amigos, nombre) {
   // Cada amigo tiene las propiedades nombre y edad.
   // Ej:
   // retorna { nombre: 'toni', edad: 33 };
-  return amigos.nombre===nombre[i];
+  return (amigos[nombre]);
 }
 
 function sumArray(array, n) {
@@ -55,8 +55,11 @@ function pluck(array, propiedad) {
   // La función va a devolver un nuevo arreglo con solo los
   // valores dentro de la propiedad recibida, por ejemplo:
   // ['TV LCD', 'Computadora']
-  var productos = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }]
-   productos.pluck(productos, name) 
+  //var productos = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }]
+    array.map=function(propiedad){
+    var nuevoArray={};
+    nuevoArray[propiedad];
+    return nuevoArray;
 }
 
 // =======================================================================
@@ -67,47 +70,47 @@ function crearClasePersona() {
   // el constructor debe recibir:
   // nombre (string) , edad (integer) , hobbies (array de strings) , amigos (array de objetos)
   // Esta funcion debe retonar la clase Persona.
-
-      // el metodo addFriend recibe un string nombre y un entero edad y debe agregar un objeto:
-      //  al arreglo de amigos de la persona.
-      // no debe retornar nada.
       function Persona(nombre,edad,hobbies,amigos)
-      {this.nombre=nombre,
-      this.edad=edad,
-      this.hobbies=hobbies,
-      this.amigos=amigos
+      {this.nombre=nombre;
+      this.edad=edad;
+      this.hobbies=hobbies;
+      this.amigos=amigos;
       }return Persona;
     }
     addFriend(nombre, edad) {
       // el metodo addFriend recibe un string nombre y un entero edad y debe agregar un objeto:
       //  al arreglo de amigos de la persona.
       // no debe retornar nada.
-      var nombre = [ ];
-      this.amigos.push(nombre, edad);
+      Persona.prototype.arraydeAmigos=function(){
+        push ([amigos.nombre=amigos.nombre, 
+          amigos.edad=amigos.edad])};
     }
     addHobby (hobby) {
       //este método debe agregar un hobby (hobby) al arreglo de hobbies de la persona.
       //no debe retornar nada.
-      //Persona.hobbies.push('hobby');
-      var hobby = ' ';
-      this.hobbies.push(hobby);
+     Persona.prototype.hobbies.push=function(){
+       push('hobby');
+     }
     }
-
     getFriends() {
       // Escribe una función que retorne un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
       // Ej:
       // persona.getFriends() // retorna ['toni', 'Leo', 'Manu']
-      var amigosdePersona = this.amigos.map(function(elemento){
-        return elemento.nombre;
+     this.amigos.prototype.map=function(element){
+       var nuevoArray={};
+       nuevoArray[element];
+       return nuevoArray;
+     }
     }
+
     getHobbies() {
       // Escribe una función que retorne un arreglo con los hobbies de la persona
       // Ej:
       // persona.getHobbies() // retorna ['correr', 'dormir', 'nadar']
-      hobbiesdePersona=Persona.hobbies.map(function(elemento){
-        return elemento.hobbies;
-    }
+      Array.prototype.slice.call(arguments);
+      }
+
     getPromedioEdad() {
       // Escribe una función que retorne el promedio de edad de los amigos de una persona
       // ej, si la persona tuviera estos amigos:
@@ -121,10 +124,13 @@ function crearClasePersona() {
        //  }]
        //}
       //persona.getPromedioEdad() // retorna 29
-      var arr=[name];
-      alert(getPromedioEdad(arr));
+      Persona.prototype.edadPromedio=function(){
+        var suma=0;
+        for(var i=0;i<Persona.amigos.length;i++){
+          suma=suma+Persona.amigos[i].edad;
+        }return suma/Persona.amigos.length;
     }
-  
+    }
 
 /* ====================== EXTRA CREDIT ===================== */
 // Este ejercicio no cuenta en el puntaje del checkpoint
